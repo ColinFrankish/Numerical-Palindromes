@@ -16,10 +16,10 @@ class Counter
     data = File.open(name).map do |line|
       line.scan(/\d+/)    
     end
-    data.flatten.collect{ |str| str.to_i}
+    convert(data)
   end
 
   def convert(data)
-
+    data.flatten.collect{ |str| str.to_i}
   end
 end
