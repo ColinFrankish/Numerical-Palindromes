@@ -40,12 +40,12 @@ describe 'Counter' do
   end
 
    it 'should map through the range to extract palindromes' do 
-    expect(counter.collect_palindromes([1,100])).to include "1","2","22"
+    expect(counter.collect_palindromes([1,100])).to be 18
     expect(counter.palindromes.count).to eq 18
    end
 
 
   it 'should output a message' do 
-    expect(counter.output).to eq []
+    expect(counter.output("./test_files/test-1.txt",["1","100"])).to eq []
   end
 end
