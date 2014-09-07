@@ -16,8 +16,9 @@ class Counter
     data = File.open(name).map do |line|
       line.scan(/\d+/)    
     end
-    convert(data)
-  end
+    range = convert(data)
+    output(name,range)
+  end 
 #unsure if I want an array of strings or integers at this stage!
   def convert(data)
     data.flatten#.collect{ |str| str.to_i}
@@ -31,4 +32,25 @@ class Counter
     @palindromes << string if palindrome(string)
   end
 
+  def empty_holder
+    @palindromes.reject!{ |str| str}
+  end
+
+  def collect_palindromes(data)
+    range = data.map{ |str| str.to_i}
+    values = range[0]..range[1]
+    strings = values.map{ |i| i.to_s}
+    strings.select{ |str| add_palindrome(str)}
+    @palindromes.count
+  end
+
+  def output(name,range)
+    num = collect_palindromes(range)
+    puts "File checked: #{name} "
+    puts "Range: #{range[0]} to #{range[1]}"
+    puts "Palindromes: #{num}"
+    empty_holder
+  end
 end
+
+Counter.new.access_files

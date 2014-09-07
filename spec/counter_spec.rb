@@ -30,5 +30,23 @@ describe 'Counter' do
   it 'should be able to add palindromes to the instance variable array' do 
     counter.add_palindrome("99")
     expect(counter.palindromes.length).to eq(1)
+    counter.add_palindrome("85")
+    expect(counter.palindromes.length).to eq(1)
+  end
+
+  it 'should be able to empty the palindromes array' do 
+    counter.add_palindrome("99")
+    counter.add_palindrome("88")
+    expect(counter.empty_holder).to eq []
+  end
+
+   it 'should map through the range to extract palindromes' do 
+    expect(counter.collect_palindromes([1,100])).to include "1","2","22"
+    expect(counter.palindromes.count).to eq 18
+   end
+
+
+  it 'should output a message' do 
+    expect(counter.output).to eq []
   end
 end
