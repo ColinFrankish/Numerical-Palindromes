@@ -48,9 +48,9 @@ class Counter
   def output(name,range)
     num = collect_palindromes(range)
     puts "File checked: #{name} "
-    puts "Range: #{range[0]} to #{range[1]}"
+    puts "Range: #{range[0]}..#{range[1]}"
     puts "Palindromes: #{num}"
-    puts " "
+    puts "==================== "
     empty_holder
   end
 end
