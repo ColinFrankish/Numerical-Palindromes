@@ -19,9 +19,9 @@ class Counter
     range = convert(data)
     output(name,range)
   end 
-#unsure if I want an array of strings or integers at this stage!
+
   def convert(data)
-    data.flatten#.collect{ |str| str.to_i}
+    data.flatten
   end
 
   def palindrome(string)
@@ -36,6 +36,7 @@ class Counter
     @palindromes.reject!{ |str| str}
   end
 
+#this method is a bit long...but makes sense..
   def collect_palindromes(data)
     range = data.map{ |str| str.to_i}
     values = range[0]..range[1]
