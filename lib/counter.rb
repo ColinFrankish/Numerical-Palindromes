@@ -36,7 +36,7 @@ class Counter
     @palindromes.reject!{ |str| str}
   end
 
-#this method is a bit long...but makes sense..
+#this method is a bit long...but makes sense and works.
   def collect_palindromes(data)
     range = data.map{ |str| str.to_i}
     values = range[0]..range[1]
