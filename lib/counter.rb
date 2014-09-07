@@ -18,4 +18,8 @@ class Counter
     end
     data.flatten.collect{ |str| str.to_i}
   end
+
+  def convert(data)
+
+  end
 end
