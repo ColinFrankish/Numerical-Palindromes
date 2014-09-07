@@ -18,13 +18,15 @@ class Counter
     end
     convert(data)
   end
-
+#unsure if I want an array of strings or integers at this stage!
   def convert(data)
-    data.flatten.collect{ |str| str.to_i}
+    data.flatten#.collect{ |str| str}
   end
 
   def palindrome(string)
     string == string.reverse
   end
+
+  
 
 end
