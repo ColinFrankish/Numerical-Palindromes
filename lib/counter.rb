@@ -50,6 +50,7 @@ class Counter
     puts "File checked: #{name} "
     puts "Range: #{range[0]} to #{range[1]}"
     puts "Palindromes: #{num}"
+    puts " "
     empty_holder
   end
 end
