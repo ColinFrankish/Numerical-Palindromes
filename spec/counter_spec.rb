@@ -26,4 +26,9 @@ describe 'Counter' do
     expect(counter.palindrome("101")).to be true 
     expect(counter.palindrome("98")).to be false
   end
+
+  it 'should be able to add palindromes to the instance variable array' do 
+    counter.add_palindrome("99")
+    expect(counter.palindromes.length).to eq(1)
+  end
 end
