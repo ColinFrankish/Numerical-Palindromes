@@ -21,4 +21,9 @@ describe 'Counter' do
   it 'should change the file array data output to integers' do 
     expect(counter.convert(["1","100"])).to eq([1,100])
   end
+
+  it 'should know what a palindrome is' do 
+    expect(counter.palindrome("101")).to be true 
+    expect(counter.palindrome("98")).to be false
+  end
 end

@@ -22,4 +22,9 @@ class Counter
   def convert(data)
     data.flatten.collect{ |str| str.to_i}
   end
+
+  def palindrome(string)
+    string == string.reverse
+  end
+
 end
