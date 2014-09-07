@@ -16,11 +16,11 @@ class Counter
     data = File.open(name).map do |line|
       line.scan(/\d+/)    
     end
-    range = convert(data)
+    range = flatten(data)
     output(name,range)
   end 
 
-  def convert(data)
+  def flatten(data)
     data.flatten
   end
 
